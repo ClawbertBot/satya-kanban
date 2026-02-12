@@ -45,10 +45,22 @@
       background: rgba(15, 23, 42, 0.08);
       overflow: hidden;
     }
+    @keyframes pulseStrip {
+      0% { background-position: 0 0; }
+      100% { background-position: 120px 0; }
+    }
     .progress__fill {
       height: 100%;
       border-radius: inherit;
-      background: linear-gradient(90deg, #22d3ee, #2563eb);
+      background: linear-gradient(90deg, rgba(34,211,238,0.9), rgba(37,99,235,0.95));
+      background-image:
+        repeating-linear-gradient(135deg,
+          rgba(255,255,255,0.35) 0px,
+          rgba(255,255,255,0.35) 15px,
+          transparent 15px,
+          transparent 30px);
+      background-size: 120px 120px;
+      animation: pulseStrip 2s linear infinite;
       transition: width 0.6s ease;
     }
     .board {
