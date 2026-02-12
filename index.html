@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Satya × Clawbert — Work Kanban</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: "Inter", "SF Pro Display", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f4f5f7;
+    }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      min-height: 100vh;
+    }
+    h1 {
+      margin: 0 0 24px;
+      font-weight: 700;
+      color: #222;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .column {
+      background: #ffffffdd;
+      backdrop-filter: blur(6px);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+    .column h2 {
+      margin-top: 0;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 6px 12px rgba(15, 23, 42, 0.08);
+    }
+    .card:last-child { margin-bottom: 0; }
+    .tag {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+    footer {
+      margin-top: 28px;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0f172a; }
+      h1 { color: #f1f5f9; }
+      .column { background: rgba(15, 23, 42, 0.7); border-color: rgba(148, 163, 184, 0.2); }
+      .card { background: rgba(15, 23, 42, 0.9); color: #f8fafc; border-color: rgba(148, 163, 184, 0.2); }
+      .tag { background: rgba(14, 165, 233, 0.15); color: #38bdf8; }
+      footer { color: #cbd5f5; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Satya × Clawbert — Active Work Kanban</h1>
+  <div class="board">
+    <section class="column">
+      <h2>Backlog / To&nbsp;Do</h2>
+      <div class="card">
+        Deeper analysis of earlier LinkedIn posts to catalog tone, storytelling patterns, and best-performing formats.
+        <div class="tag">Research</div>
+      </div>
+      <div class="card">
+        Draft a concise "voice sheet" that encodes humility, vulnerability, and operator rigor guidelines for future content.
+        <div class="tag">Voice</div>
+      </div>
+      <div class="card">
+        Outline Friday LinkedIn post concept anchored on a vulnerable/failure story that converts into an operator lesson.
+        <div class="tag">Content</div>
+      </div>
+    </section>
+
+    <section class="column">
+      <h2>In Progress</h2>
+      <div class="card">
+        Mapping recent activity feed (latest 5+ posts) for engagement signals, hooks, and structure to inform the voice sheet.
+        <div class="tag">Research</div>
+      </div>
+    </section>
+
+    <section class="column">
+      <h2>Done</h2>
+      <div class="card">Verified OpenClaw system health + connectivity.</div>
+      <div class="card">Confirmed names/roles (Satya, Carmen, Natalia) and logged context.</div>
+      <div class="card">Summarized current LinkedIn profile (headline, About, Featured, Experience).</div>
+      <div class="card">Diagnosed low engagement on latest post and recommended fixes.</div>
+      <div class="card">Synced on humility/vulnerability tone requirements for future content.</div>
+      <div class="card">Built this shareable Kanban view.</div>
+    </section>
+  </div>
+  <footer>Updated: 2026-02-11 · Clawbert</footer>
+</body>
+</html>
